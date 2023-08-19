@@ -32,7 +32,7 @@ function NewsList() {
     }, []);
 
     setNews(uniqueNews);
-      }    } catch (error) {
+      }    catch (error) {
       console.error('Error fetching news data:', error);
     }
   };
