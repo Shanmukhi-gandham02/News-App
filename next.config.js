@@ -3,9 +3,16 @@ const nextConfig = {
   output: 'export',
  
     
-    images: {
-      domains: ['lh3.googleusercontent.com'],
-    },
+   images: {
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "*.googleusercontent.com",
+          port: "",
+          pathname: "**",
+        },
+      ],
+    }, 
     webpack(config) {
       config.experiments = {
         ...config.experiments,
