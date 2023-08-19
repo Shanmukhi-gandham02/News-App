@@ -1,18 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
- output: 'export',
+  output: 'export',
  
-    reactStrictMode: true,
+    
     images: {
-      remotePatterns: [
-        {
-          protocol: "https",
-          hostname: "*.googleusercontent.com",
-          port: "",
-          pathname: "**",
-        },
-      ],
-    }, 
+      domains: ['lh3.googleusercontent.com'],
+    },
+    webpack(config) {
+      config.experiments = {
+        ...config.experiments,
+        topLevelAwait: true,
+      }
+      return config
+    }
 
 }
 
