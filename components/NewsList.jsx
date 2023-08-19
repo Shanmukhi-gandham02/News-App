@@ -18,9 +18,10 @@ function NewsList() {
         // const apiKey = '79006359bd1544d3899418d29f53d001';
         // const apiUrl = `https://newsapi.org/v2/everything?q=tesla&from=2023-07-19&sortBy=publishedAt&apiKey=${apiKey}`;
         // console.log(apiUrl);
-        const response = await fetch('./public/Sample_report.json');
-         console.log(response);
+        const response = await fetch('/Sample_report.json');
+         
         const data = await response.json();
+        console.log(data);
     
     // Filtering out duplicate articles based on title
         const uniqueNews = data.articles.reduce((uniqueArticles, article) => {
