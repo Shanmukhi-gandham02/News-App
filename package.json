@@ -2,7 +2,7 @@
   "name": "news-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://"
+  "homepage": "https://shanmukhi-gandham02.github.io/news-app",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
