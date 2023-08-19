@@ -18,10 +18,8 @@ function NewsList() {
         // const apiKey = '79006359bd1544d3899418d29f53d001';
         // const apiUrl = `https://newsapi.org/v2/everything?q=tesla&from=2023-07-19&sortBy=publishedAt&apiKey=${apiKey}`;
         // console.log(apiUrl);
-        const response = await fetch('/Sample_Report.json');
-       
-        
-    if (response.ok) {
+        const response = await fetch('./public/Sample_Report.json');
+         console.log(response);
         const data = await response.json();
     
     // Filtering out duplicate articles based on title
@@ -34,8 +32,7 @@ function NewsList() {
     }, []);
 
     setNews(uniqueNews);
-      }
-    } catch (error) {
+      }    } catch (error) {
       console.error('Error fetching news data:', error);
     }
   };
