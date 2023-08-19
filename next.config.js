@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
  
-    
+    basePath: '/Shanmukhi-gandham02',
    images: {
       remotePatterns: [
         {
