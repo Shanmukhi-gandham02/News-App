@@ -13,13 +13,14 @@ function NewsList() {
 
   useEffect(() => {
     // fetching the data from api and storing it in 'news' 
-    async function fetchNews() {
-      const response = await fetch(
-        `https://newsapi.org/v2/everything?q=tesla
-        &from=2023-07-18&sortBy=publishedAt&apiKey=79006359bd1544d3899418d29f53d001`
-      );
-      
-      
+    const fetchNews = async () => {
+      try {
+        // const apiKey = '79006359bd1544d3899418d29f53d001';
+        // const apiUrl = `https://newsapi.org/v2/everything?q=tesla&from=2023-07-19&sortBy=publishedAt&apiKey=${apiKey}`;
+        // console.log(apiUrl);
+        const response = await fetch('/Sample_Report.json');
+       
+        
     if (response.ok) {
         const data = await response.json();
     
@@ -34,7 +35,10 @@ function NewsList() {
 
     setNews(uniqueNews);
       }
+    } catch (error) {
+      console.error('Error fetching news data:', error);
     }
+  };
 
     fetchNews();
   }, []);
