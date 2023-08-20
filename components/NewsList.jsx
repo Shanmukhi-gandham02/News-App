@@ -75,15 +75,12 @@ function NewsList() {
                             <p>{article.title}</p> 
                             
                         <div className='flex flex-col items-center gap-y-2'>
-                          {user?(<Link href={`/NewsArticle/${encodeURIComponent(article.title)}`}>
+                          <Link href={`/NewsArticle/${encodeURIComponent(article.title)}`}>
                                 <button className='outline_btn mb-2 mt-2'
                                  onClick={() => handleArticleClick(article)}>
                                     Read more
                                 </button>
-                            </Link>):(<button className='outline_btn mb-2 mt-2'
-                                 onClick={() => {alert('Log In to continue!')}}>
-                                    Read more
-                                </button>)}
+                            </Link>
                             
                       {/* if user is logged in he can add articles to his favourites 
                       else an alert will be shown to log in */}
