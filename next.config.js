@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
- 
-    basePath: '/Shanmukhi-gandham02',
+  experimental: {
+      appDir: true,
+      serverComponentsExternalPackages: ["firebase"],
+    },
    images: {
       remotePatterns: [
         {
