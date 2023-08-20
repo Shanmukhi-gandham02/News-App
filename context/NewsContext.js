@@ -64,7 +64,7 @@ useEffect(() => {
 }, [user]);
   
     return (
-      <NewsContext.Provider value={{ newsData, setNewsData, selectedArticle, setSelectedArticle, favouriteArticles, addToFavourite, fetchFavouriteArticles }}>
+      <NewsContext.Provider value={{ newsData, setNewsData, selectedArticle, setSelectedArticle, updateSelectedArticle, favouriteArticles, addToFavourite, fetchFavouriteArticles }}>
         {children}
       </NewsContext.Provider>
     );
