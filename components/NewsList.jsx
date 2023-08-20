@@ -76,7 +76,7 @@ function NewsList() {
                             
                         <div className='flex flex-col items-center gap-y-2'>
 
-                          // log in to read more about the article
+                          {/* log in to read more about the article*/}
                           {user?(<Link href={`/NewsArticle/${encodeURIComponent(article.title)}`}>
                                 <button className='outline_btn mb-2 mt-2'
                                  onClick={() => handleArticleClick(article)}>
