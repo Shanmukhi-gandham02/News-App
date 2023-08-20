@@ -48,6 +48,7 @@ function NewsList() {
 //onclick set the article to viewed article
   const handleArticleClick = article => {
     setSelectedArticle(article);
+    localStorage.setItem('selectedArticle', JSON.stringify(article));
   };
 
   return (
