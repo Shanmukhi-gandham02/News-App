@@ -35,6 +35,11 @@ const Nav = () => {
       {/* Displays the the Logo and name of the app  and are linked to the home page when clicked*/}
         
         <Link href="/" className='flex gap-2 flex-center'> 
+            <Image src="/logo.png"
+              alt='logo'
+              width={50}
+              height={50}
+              className='object-contain' />
             <p className="logo_text ">News App</p>
         </Link>
     
