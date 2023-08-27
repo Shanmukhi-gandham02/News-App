@@ -53,6 +53,11 @@ function NewsList() {
   };
 
   return (
+    <>
+      <Head>
+				<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+			</Head>
+    
     <div className='mt-6'>
         
         {/* Added the toggle button to switch between grid and list view */}
@@ -113,6 +118,7 @@ function NewsList() {
          </div>
         </div>
     </div>
+  </>
   );
 }
 
