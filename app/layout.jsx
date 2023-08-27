@@ -1,4 +1,5 @@
 import './globals.css'
+import Head from 'next/head'
 
 import Nav from '@components/Nav'
 
@@ -13,6 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+				
+				<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+			</Head>
       <body >
       <div className="main">
           <div className="gradient" />
