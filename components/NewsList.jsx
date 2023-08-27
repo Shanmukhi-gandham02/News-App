@@ -55,8 +55,8 @@ function NewsList() {
   return (
     <>
       <Head>
-				<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-			</Head>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
+      </Head>
     
     <div className='mt-6'>
         
