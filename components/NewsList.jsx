@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useState, } from 'react';
 import Link from 'next/link';
-import Head from 'next/head'
 import { useNewsContext } from '@context/NewsContext';
 import { userAuth } from '@context/AuthContext'
 
@@ -16,11 +15,11 @@ function NewsList() {
     // fetching the data from api and storing it in 'news' 
     const fetchNews = async () => {
       try {
-         const apiKey = '79006359bd1544d3899418d29f53d001';
-         const apiUrl = `https://newsapi.org/v2/everything?q=tesla&from=2023-07-19&sortBy=publishedAt&apiKey=${apiKey}`;
-         console.log(apiUrl);
-        // const response = await fetch('/Sample_report.json');
-        const response = await fetch('https://newsapi.org/v2/everything?q=apple&from=2023-08-26&to=2023-08-26&sortBy=popularity&apiKey=79006359bd1544d3899418d29f53d001');
+         //const apiKey = '79006359bd1544d3899418d29f53d001';
+         //const apiUrl = `https://newsapi.org/v2/everything?q=tesla&from=2023-07-19&sortBy=publishedAt&apiKey=${apiKey}`;
+         //console.log(apiUrl);
+         const response = await fetch('/Sample_report.json');
+        //const response = await fetch('https://newsapi.org/v2/everything?q=apple&from=2023-08-26&to=2023-08-26&sortBy=popularity&apiKey=79006359bd1544d3899418d29f53d001');
          
         const data = await response.json();
         console.log(data);
@@ -55,9 +54,6 @@ function NewsList() {
 
   return (
     <>
-      <Head>
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
-      </Head>
     
     <div className='mt-6'>
         
